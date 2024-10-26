@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var purchasePriceLabel: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
