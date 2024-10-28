@@ -324,6 +324,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="무 주식 계산기" id="67h-qO-uoT"/>
+                    <connections>
+                        <outlet property="purchasePrice" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
+                        <outletCollection property="dailyTurnipPrices" destination="gBW-0H-oyl" collectionClass="NSMutableArray" id="SS4-8F-Ju2"/>
+                        <outletCollection property="dailyTurnipPrices" destination="xQJ-TE-yA3" collectionClass="NSMutableArray" id="wVS-oU-Yhd"/>
+                        <outletCollection property="dailyTurnipPrices" destination="W5U-nj-M8J" collectionClass="NSMutableArray" id="7Ni-F6-GoY"/>
+                        <outletCollection property="dailyTurnipPrices" destination="9Qu-o4-9LX" collectionClass="NSMutableArray" id="yEU-6H-O9S"/>
+                        <outletCollection property="dailyTurnipPrices" destination="SDb-Oi-qML" collectionClass="NSMutableArray" id="IQG-1r-SQh"/>
+                        <outletCollection property="dailyTurnipPrices" destination="aZe-F1-dxC" collectionClass="NSMutableArray" id="s8r-Ib-weO"/>
+                        <outletCollection property="dailyTurnipPrices" destination="NpS-x7-Xc0" collectionClass="NSMutableArray" id="hwE-8F-wZn"/>
+                        <outletCollection property="dailyTurnipPrices" destination="cZF-91-MVp" collectionClass="NSMutableArray" id="z0b-wp-VUE"/>
+                        <outletCollection property="dailyTurnipPrices" destination="gfC-Nn-2Vw" collectionClass="NSMutableArray" id="avH-Xl-QxN"/>
+                        <outletCollection property="dailyTurnipPrices" destination="wUf-PT-BE0" collectionClass="NSMutableArray" id="Ex4-2k-f28"/>
+                        <outletCollection property="dailyTurnipPrices" destination="fSY-q2-t3v" collectionClass="NSMutableArray" id="tzp-bf-OOo"/>
+                        <outletCollection property="dailyTurnipPrices" destination="MB7-46-Tk6" collectionClass="NSMutableArray" id="AgL-eh-cBu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="585-Us-OPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
