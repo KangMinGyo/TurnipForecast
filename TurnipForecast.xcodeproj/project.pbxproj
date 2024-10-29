@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19068B2CCE76940077BF04 /* TurnipPriceData.swift */; };
+		8C19068F2CD095110077BF04 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19068E2CD095110077BF04 /* NetworkManager.swift */; };
 		8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393342CC934D000B5656E /* AppDelegate.swift */; };
 		8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393362CC934D000B5656E /* SceneDelegate.swift */; };
 		8CC393392CC934D000B5656E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393382CC934D000B5656E /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		8C19068B2CCE76940077BF04 /* TurnipPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnipPriceData.swift; sourceTree = "<group>"; };
+		8C19068E2CD095110077BF04 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8CC393312CC934D000B5656E /* TurnipForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnipForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC393342CC934D000B5656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC393362CC934D000B5656E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C19068D2CD094FC0077BF04 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8C19068E2CD095110077BF04 /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		8CC393282CC934D000B5656E = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +68,7 @@
 		8CC393332CC934D000B5656E /* TurnipForecast */ = {
 			isa = PBXGroup;
 			children = (
+				8C19068D2CD094FC0077BF04 /* Networking */,
 				8CC393342CC934D000B5656E /* AppDelegate.swift */,
 				8CC393362CC934D000B5656E /* SceneDelegate.swift */,
 				8CC3934A2CCA1ACB00B5656E /* Models */,
@@ -167,6 +178,7 @@
 			files = (
 				8CC393392CC934D000B5656E /* ViewController.swift in Sources */,
 				8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */,
+				8C19068F2CD095110077BF04 /* NetworkManager.swift in Sources */,
 				8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */,
 				8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */,
 			);
