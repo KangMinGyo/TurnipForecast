@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
 
     @IBOutlet weak var purchasePrice: UITextField!
     
@@ -18,6 +18,13 @@ class ViewController: UIViewController {
 
     }
 
-
+    @IBAction func resetButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    
+    @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
+        
+    }
 }
 

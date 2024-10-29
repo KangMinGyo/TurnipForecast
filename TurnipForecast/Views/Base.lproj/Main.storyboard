@@ -264,6 +264,9 @@
                                                                 <integer key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="resetButtonTapped:" destination="rLt-UG-luj" eventType="touchUpInside" id="MDS-MA-8Qj"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oO2-e8-6nc">
                                                         <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="50"/>
@@ -281,6 +284,9 @@
                                                                 <integer key="value" value="20"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="fetchTurnipPriceButtonTapped:" destination="rLt-UG-luj" eventType="touchUpInside" id="kig-6S-65G"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
