@@ -13,16 +13,23 @@ final class ViewController: UIViewController {
     
     @IBOutlet var dailyTurnipPrices: [UITextField]!
     
+    var turnipPrices: [String] {
+        return dailyTurnipPrices.map { $0.text ?? "" }
+    }
+    
+    let networkManager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Tap Gesture Recognizer 추가
+        // Tap Gesture 추가
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
+        print(#function)
         purchasePrice.text = ""
         
         for textField in dailyTurnipPrices {
@@ -32,9 +39,18 @@ final class ViewController: UIViewController {
     
     
     @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
+        print(#function)
         
+        networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice.text!, dailyPrices: turnipPrices) { data in
+            switch data {
+            case.success(let priceData):
+                print(priceData)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
-    
+
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }

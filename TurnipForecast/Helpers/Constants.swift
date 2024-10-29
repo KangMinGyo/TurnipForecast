@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+public enum TurnipApi {
+    static let requestUrl = "https://api.ac-turnip.com/data/?"
+    static let mediaParam = "f="
+}
