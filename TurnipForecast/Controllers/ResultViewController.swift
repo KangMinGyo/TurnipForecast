@@ -11,10 +11,13 @@ class ResultViewController: UIViewController {
     
     @IBOutlet weak var tablesView: UIView!
     @IBOutlet weak var graphsView: UIView!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        graphsView.isHidden = true
+        
     }
     
     @IBAction func changeView(_ sender: UISegmentedControl) {
@@ -29,5 +32,4 @@ class ResultViewController: UIViewController {
             break
         }
     }
-    
 }
