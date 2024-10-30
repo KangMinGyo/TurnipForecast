@@ -10,13 +10,13 @@ import UIKit
 class ResultViewController: UIViewController {
     
     @IBOutlet weak var tablesView: UIView!
-    @IBOutlet weak var graphsView: UIView!
+    @IBOutlet weak var graphView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        graphsView.isHidden = true
+        graphView.isHidden = true
         
     }
     
@@ -24,10 +24,10 @@ class ResultViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             tablesView.isHidden = false
-            graphsView.isHidden = true
+            graphView.isHidden = true
         case 1:
             tablesView.isHidden = true
-            graphsView.isHidden = false
+            graphView.isHidden = false
         default:
             break
         }

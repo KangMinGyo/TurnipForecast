@@ -362,8 +362,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Ql-X7-KUc">
                                 <rect key="frame" x="20" y="123" width="353" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="표"/>
+                                    <segment title="그래프"/>
                                 </segments>
                                 <connections>
                                     <action selector="changeView:" destination="144-LP-Bb8" eventType="valueChanged" id="Jo7-BR-Wj2"/>
@@ -400,7 +400,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Wk1-LW-5rU"/>
                     <connections>
-                        <outlet property="graphsView" destination="ETd-rZ-43R" id="YkA-5g-do3"/>
+                        <outlet property="graphView" destination="ETd-rZ-43R" id="YkA-5g-do3"/>
                         <outlet property="tablesView" destination="3pR-6I-2oI" id="FMO-1d-C6s"/>
                     </connections>
                 </viewController>
@@ -500,10 +500,10 @@
             </objects>
             <point key="canvasLocation" x="5626.7175572519081" y="-336.61971830985919"/>
         </scene>
-        <!--View Controller-->
+        <!--Graph View Controller-->
         <scene sceneID="rL8-yQ-wJ7">
             <objects>
-                <viewController id="LuD-MF-jeV" sceneMemberID="viewController">
+                <viewController id="LuD-MF-jeV" customClass="GraphViewController" customModule="TurnipForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0XV-ua-42H">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="678"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

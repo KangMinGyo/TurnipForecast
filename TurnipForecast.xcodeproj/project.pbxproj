@@ -13,6 +13,7 @@
 		8C1906942CD200AA0077BF04 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906932CD200AA0077BF04 /* ResultViewController.swift */; };
 		8C1906962CD21D4B0077BF04 /* PricesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906952CD21D4B0077BF04 /* PricesCell.swift */; };
 		8C1906982CD245F50077BF04 /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906972CD245F50077BF04 /* TablesViewController.swift */; };
+		8C19069A2CD26CE40077BF04 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906992CD26CE40077BF04 /* GraphViewController.swift */; };
 		8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393342CC934D000B5656E /* AppDelegate.swift */; };
 		8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393362CC934D000B5656E /* SceneDelegate.swift */; };
 		8CC393392CC934D000B5656E /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393382CC934D000B5656E /* CalculateViewController.swift */; };
@@ -28,6 +29,7 @@
 		8C1906932CD200AA0077BF04 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8C1906952CD21D4B0077BF04 /* PricesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesCell.swift; sourceTree = "<group>"; };
 		8C1906972CD245F50077BF04 /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
+		8C1906992CD26CE40077BF04 /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		8CC393312CC934D000B5656E /* TurnipForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnipForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC393342CC934D000B5656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC393362CC934D000B5656E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				8CC393382CC934D000B5656E /* CalculateViewController.swift */,
 				8C1906932CD200AA0077BF04 /* ResultViewController.swift */,
 				8C1906972CD245F50077BF04 /* TablesViewController.swift */,
+				8C1906992CD26CE40077BF04 /* GraphViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1906982CD245F50077BF04 /* TablesViewController.swift in Sources */,
+				8C19069A2CD26CE40077BF04 /* GraphViewController.swift in Sources */,
 				8CC393392CC934D000B5656E /* CalculateViewController.swift in Sources */,
 				8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */,
 				8C1906942CD200AA0077BF04 /* ResultViewController.swift in Sources */,
