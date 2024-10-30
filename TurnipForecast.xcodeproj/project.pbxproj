@@ -10,9 +10,10 @@
 		8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19068B2CCE76940077BF04 /* TurnipPriceData.swift */; };
 		8C19068F2CD095110077BF04 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19068E2CD095110077BF04 /* NetworkManager.swift */; };
 		8C1906922CD0AB5A0077BF04 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906912CD0AB5A0077BF04 /* Constants.swift */; };
+		8C1906942CD200AA0077BF04 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906932CD200AA0077BF04 /* ResultViewController.swift */; };
 		8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393342CC934D000B5656E /* AppDelegate.swift */; };
 		8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393362CC934D000B5656E /* SceneDelegate.swift */; };
-		8CC393392CC934D000B5656E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393382CC934D000B5656E /* ViewController.swift */; };
+		8CC393392CC934D000B5656E /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393382CC934D000B5656E /* CalculateViewController.swift */; };
 		8CC3933C2CC934D000B5656E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8CC3933B2CC934D000B5656E /* Base */; };
 		8CC3933E2CC934D200B5656E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC3933D2CC934D200B5656E /* Assets.xcassets */; };
 		8CC393412CC934D200B5656E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8CC393402CC934D200B5656E /* Base */; };
@@ -22,10 +23,11 @@
 		8C19068B2CCE76940077BF04 /* TurnipPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnipPriceData.swift; sourceTree = "<group>"; };
 		8C19068E2CD095110077BF04 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8C1906912CD0AB5A0077BF04 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8C1906932CD200AA0077BF04 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		8CC393312CC934D000B5656E /* TurnipForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnipForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC393342CC934D000B5656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC393362CC934D000B5656E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8CC393382CC934D000B5656E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CC393382CC934D000B5656E /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
 		8CC3933B2CC934D000B5656E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CC3933D2CC934D200B5656E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC393402CC934D200B5656E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -95,7 +97,8 @@
 		8CC393482CCA1ABC00B5656E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8CC393382CC934D000B5656E /* ViewController.swift */,
+				8CC393382CC934D000B5656E /* CalculateViewController.swift */,
+				8C1906932CD200AA0077BF04 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,8 +190,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CC393392CC934D000B5656E /* ViewController.swift in Sources */,
+				8CC393392CC934D000B5656E /* CalculateViewController.swift in Sources */,
 				8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */,
+				8C1906942CD200AA0077BF04 /* ResultViewController.swift in Sources */,
 				8C19068F2CD095110077BF04 /* NetworkManager.swift in Sources */,
 				8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */,
 				8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */,

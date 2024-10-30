@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class CalculateViewController: UIViewController {
     
     @IBOutlet weak var purchasePrice: UITextField!
     
@@ -22,10 +22,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Tap Gesture 추가
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        
+        addKeyboardDismissGesture()
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -40,7 +37,7 @@ final class ViewController: UIViewController {
     
     @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
         print(#function)
-        
+        print("turnipPrices: \(turnipPrices)")
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice.text!, dailyPrices: turnipPrices) { data in
             switch data {
             case.success(let priceData):
@@ -50,10 +47,20 @@ final class ViewController: UIViewController {
             }
         }
     }
+    
+    // 특정 타겟과 액션을 설정하여 탭이 발생할 때 실행할 메서드를 지정
+    private func addKeyboardDismissGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
 
-    @objc func dismissKeyboard() {
-        self.view.endEditing(true)
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
+//    //화면의 탭을 감지해서 키보드 내려가게 하기
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
 }
 
