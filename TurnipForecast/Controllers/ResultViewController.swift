@@ -8,22 +8,26 @@
 import UIKit
 
 class ResultViewController: UIViewController {
+    
+    @IBOutlet weak var tablesView: UIView!
+    @IBOutlet weak var graphsView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func changeView(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            tablesView.isHidden = false
+            graphsView.isHidden = true
+        case 1:
+            tablesView.isHidden = true
+            graphsView.isHidden = false
+        default:
+            break
+        }
     }
-    */
-
+    
 }
