@@ -43,7 +43,7 @@ class TablesViewController: UIViewController {
     }
     
     func registerNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: NotiName.turnipPriceData, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: .didCalculateResult, object: nil)
     }
     
     @objc private func receiveData(_ noti: Notification) {

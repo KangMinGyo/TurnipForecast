@@ -17,7 +17,6 @@ public struct Cell {
     private init() {}
 }
 
-public struct NotiName {
-    static let turnipPriceData = Notification.Name("TurnipPriceData")
-    private init() {}
+extension Notification.Name {
+    static let didCalculateResult = Notification.Name("DidCalculateResult")
 }
