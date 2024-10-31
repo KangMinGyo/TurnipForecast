@@ -15,6 +15,7 @@
 		8C1906982CD245F50077BF04 /* TablesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906972CD245F50077BF04 /* TablesViewController.swift */; };
 		8C19069A2CD26CE40077BF04 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906992CD26CE40077BF04 /* ChartViewController.swift */; };
 		8C19069F2CD3548C0077BF04 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19069E2CD3548C0077BF04 /* ChartView.swift */; };
+		8C1906A32CD36F550077BF04 /* DailyPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1906A22CD36F550077BF04 /* DailyPriceData.swift */; };
 		8CC393352CC934D000B5656E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393342CC934D000B5656E /* AppDelegate.swift */; };
 		8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393362CC934D000B5656E /* SceneDelegate.swift */; };
 		8CC393392CC934D000B5656E /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC393382CC934D000B5656E /* CalculateViewController.swift */; };
@@ -32,6 +33,7 @@
 		8C1906972CD245F50077BF04 /* TablesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablesViewController.swift; sourceTree = "<group>"; };
 		8C1906992CD26CE40077BF04 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		8C19069E2CD3548C0077BF04 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		8C1906A22CD36F550077BF04 /* DailyPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPriceData.swift; sourceTree = "<group>"; };
 		8CC393312CC934D000B5656E /* TurnipForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TurnipForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC393342CC934D000B5656E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CC393362CC934D000B5656E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				8C19068B2CCE76940077BF04 /* TurnipPriceData.swift */,
+				8C1906A22CD36F550077BF04 /* DailyPriceData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				8C1906962CD21D4B0077BF04 /* PricesCell.swift in Sources */,
 				8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */,
 				8C1906922CD0AB5A0077BF04 /* Constants.swift in Sources */,
+				8C1906A32CD36F550077BF04 /* DailyPriceData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
