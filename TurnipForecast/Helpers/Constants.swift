@@ -16,3 +16,8 @@ public struct Cell {
     static let pricesCellIdentifier = "PricesCell"
     private init() {}
 }
+
+public struct NotiName {
+    static let turnipPriceData = Notification.Name("TurnipPriceData")
+    private init() {}
+}

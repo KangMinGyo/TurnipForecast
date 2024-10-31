@@ -37,11 +37,12 @@ final class CalculateViewController: UIViewController {
     
     @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
         print(#function)
+
         print("turnipPrices: \(turnipPrices)")
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice.text!, dailyPrices: turnipPrices) { data in
             switch data {
             case.success(let priceData):
-                print(priceData)
+                NotificationCenter.default.post(name: NotiName.turnipPriceData, object: nil, userInfo: ["data": priceData])
             case .failure(let error):
                 print(error.localizedDescription)
             }

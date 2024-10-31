@@ -12,14 +12,14 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var tablesView: UIView!
     @IBOutlet weak var graphView: UIView!
     
+    var turnipPrices: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         graphView.isHidden = true
-        
     }
-    
+
     @IBAction func changeView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:

@@ -13,9 +13,25 @@ class PricesCell: UITableViewCell {
     @IBOutlet weak var dayTimePrice: UILabel!
     @IBOutlet weak var nightTimePrice: UILabel!
     
+    var dailyPriceData: DailyPriceData? {
+        didSet {
+            guard let data = dailyPriceData else { return }
+            dayLabel.text = data.day
+            dayTimePrice.text = "\(data.minDay) ~ \(data.maxDay)"
+            nightTimePrice.text = "\(data.minNight) ~ \(data.maxNight)"
+        }
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        dayLabel.text = nil
+        dayTimePrice.text = nil
+        nightTimePrice.text = nil
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
