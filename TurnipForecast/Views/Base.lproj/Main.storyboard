@@ -500,14 +500,14 @@
             </objects>
             <point key="canvasLocation" x="5626.7175572519081" y="-336.61971830985919"/>
         </scene>
-        <!--Graph View Controller-->
+        <!--Chart View Controller-->
         <scene sceneID="rL8-yQ-wJ7">
             <objects>
-                <viewController id="LuD-MF-jeV" customClass="GraphViewController" customModule="TurnipForecast" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LuD-MF-jeV" customClass="ChartViewController" customModule="TurnipForecast" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0XV-ua-42H">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="678"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6u-KP-grL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -525,8 +525,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
