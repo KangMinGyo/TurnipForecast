@@ -17,8 +17,8 @@ class PricesCell: UITableViewCell {
         didSet {
             guard let data = dailyPriceData else { return }
             dayLabel.text = data.day
-            dayTimePrice.text = "\(data.minDay) ~ \(data.maxDay)"
-            nightTimePrice.text = "\(data.minNight) ~ \(data.maxNight)"
+            dayTimePrice.text = "☀️ 오전 : \(Int(data.minDay)) ~ \(Int(data.maxDay))"
+            nightTimePrice.text = "🌙 오후 : \(Int(data.minNight)) ~ \(Int(data.maxNight))"
         }
     }
     

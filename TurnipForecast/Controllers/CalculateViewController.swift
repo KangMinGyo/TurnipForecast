@@ -37,8 +37,7 @@ final class CalculateViewController: UIViewController {
     
     @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
         print(#function)
-
-        print("turnipPrices: \(turnipPrices)")
+        
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice.text!, dailyPrices: turnipPrices) { data in
             switch data {
             case.success(let priceData):

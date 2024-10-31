@@ -17,38 +17,46 @@ class TablesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLoadingIndicator() // 로딩 인디케이터 설정
-        pricesTableView.isHidden = true // 초기에는 테이블 뷰를 숨깁니다.
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: NotiName.turnipPriceData, object: nil)
-        
+        setupLoadingIndicator()
+        registerNotifications()
+        setupTableView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        pricesTableView.reloadData()
+    }
+    
+    private func setupTableView() {
         pricesTableView.dataSource = self
+        pricesTableView.rowHeight = 100
     }
     
     private func setupLoadingIndicator() {
+        pricesTableView.isHidden = true
+        
         loadingIndicator = UIActivityIndicatorView(style: .medium)
         loadingIndicator.center = view.center
         view.addSubview(loadingIndicator)
         loadingIndicator.startAnimating() // 로딩 시작
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        print("테이블 뷰 리로드")
-        pricesTableView.reloadData()
+    func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: NotiName.turnipPriceData, object: nil)
     }
     
     @objc private func receiveData(_ noti: Notification) {
         print(#function)
         guard let data = noti.userInfo?["data"] as? TurnipPriceData else { return }
         self.turnipPrices = data
-        print("turnipPrices: \(turnipPrices)")
-        self.pricesTableView.reloadData()
         
-        loadingIndicator.stopAnimating() // 로딩 중지
-        loadingIndicator.isHidden = true
-        pricesTableView.isHidden = false // 데이터 로딩 후 테이블 뷰 표시
+        DispatchQueue.main.async {
+            self.pricesTableView.reloadData()
+            self.loadingIndicator.stopAnimating() // 로딩 중지
+            self.loadingIndicator.isHidden = true
+            self.pricesTableView.isHidden = false // 데이터 로딩 후 테이블 뷰 표시
+        }
     }
     
     deinit {
@@ -64,11 +72,15 @@ extension TablesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print(#function)
+        
         let cell = pricesTableView.dequeueReusableCell(withIdentifier: Cell.pricesCellIdentifier, for: indexPath) as! PricesCell
         guard let data = turnipPrices else { return UITableViewCell() }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
         print("dailyPriceData: \(dailyPriceData)")
         cell.dailyPriceData = dailyPriceData[indexPath.row]
+        
+        cell.isUserInteractionEnabled = false
         return cell
     }
 }
