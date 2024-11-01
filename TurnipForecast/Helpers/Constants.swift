@@ -16,7 +16,3 @@ public struct Cell {
     static let pricesCellIdentifier = "PricesCell"
     private init() {}
 }
-
-extension Notification.Name {
-    static let didCalculateResult = Notification.Name("DidCalculateResult")
-}

@@ -19,7 +19,7 @@ struct ChartView: View {
                     xEnd: .value("Price", data.dayMax + 1),
                     y: .value("Day", "\(data.day) 낮")
                 )
-                .foregroundStyle(Color("DayChartColor"))
+                .foregroundStyle(Color.Chart.dayColor)
                 .annotation(position: .trailing) {
                     Text("\(Int(data.dayMin)) - \(Int(data.dayMax))")
                         .font(.caption)
@@ -31,7 +31,7 @@ struct ChartView: View {
                     xEnd: .value("Price", data.nightMax + 1),
                     y: .value("Day", "\(data.day) 밤")
                 )
-                .foregroundStyle(Color("NightChartColor"))
+                .foregroundStyle(Color.Chart.nightColor)
                 .annotation(position: .trailing) {
                     Text("\(Int(data.nightMin)) - \(Int(data.nightMax))")
                         .font(.caption)
