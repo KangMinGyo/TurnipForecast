@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PricesCell: UITableViewCell {
+final class PricesCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var dayTimePrice: UILabel!
@@ -37,7 +37,6 @@ class PricesCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }
