@@ -16,26 +16,26 @@ struct ChartView: View {
             ForEach(dailyPriceData) { data in
                 BarMark(
                     xStart: .value("Price", data.dayMin),
-                    xEnd: .value("Price", data.dayMax),
+                    xEnd: .value("Price", data.dayMax + 1),
                     y: .value("Day", "\(data.day) 낮")
                 )
-                .foregroundStyle(.orange)
+                .foregroundStyle(Color("DayChartColor"))
                 .annotation(position: .trailing) {
                     Text("\(Int(data.dayMin)) - \(Int(data.dayMax))")
                         .font(.caption)
-                        .foregroundColor(.orange)
+                        .foregroundColor(.black)
                 }
                 
                 BarMark(
                     xStart: .value("Price", data.nightMin),
-                    xEnd: .value("Price", data.nightMax),
+                    xEnd: .value("Price", data.nightMax + 1),
                     y: .value("Day", "\(data.day) 밤")
                 )
-                .foregroundStyle(.indigo)
+                .foregroundStyle(Color("NightChartColor"))
                 .annotation(position: .trailing) {
                     Text("\(Int(data.nightMin)) - \(Int(data.nightMax))")
                         .font(.caption)
-                        .foregroundColor(.indigo)
+                        .foregroundColor(.black)
                 }
             }
         }
