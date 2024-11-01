@@ -8,7 +8,7 @@
 import Foundation
 
 struct DailyPriceData: Identifiable {
-    let id = UUID() // 고유 식별자 추가
+    let id = UUID()
     let day: String
     let dayMin: Double
     let dayMax: Double

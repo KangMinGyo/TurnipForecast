@@ -95,10 +95,10 @@
 		8CC393332CC934D000B5656E /* TurnipForecast */ = {
 			isa = PBXGroup;
 			children = (
-				8C1906902CD0AB470077BF04 /* Helpers */,
-				8C19068D2CD094FC0077BF04 /* Networking */,
 				8CC393342CC934D000B5656E /* AppDelegate.swift */,
 				8CC393362CC934D000B5656E /* SceneDelegate.swift */,
+				8C1906902CD0AB470077BF04 /* Helpers */,
+				8C19068D2CD094FC0077BF04 /* Networking */,
 				8CC3934A2CCA1ACB00B5656E /* Models */,
 				8CC393492CCA1AC400B5656E /* Views */,
 				8CC393482CCA1ABC00B5656E /* Controllers */,

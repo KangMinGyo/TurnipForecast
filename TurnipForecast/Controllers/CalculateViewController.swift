@@ -59,11 +59,6 @@ final class CalculateViewController: UIViewController {
     @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
-    
-//    //화면의 탭을 감지해서 키보드 내려가게 하기
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        self.view.endEditing(true)
-//    }
 }
 
 
