@@ -72,15 +72,13 @@ extension TablesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(#function)
-        
         let cell = pricesTableView.dequeueReusableCell(withIdentifier: Cell.pricesCellIdentifier, for: indexPath) as! PricesCell
         guard let data = turnipPrices else { return UITableViewCell() }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
-        print("dailyPriceData: \(dailyPriceData)")
         cell.dailyPriceData = dailyPriceData[indexPath.row]
         
         cell.isUserInteractionEnabled = false
         return cell
     }
 }
+

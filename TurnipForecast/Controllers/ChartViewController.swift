@@ -8,24 +8,47 @@
 import UIKit
 import SwiftUI
 
-class ChartViewController: UIViewController {
+final class ChartViewController: UIViewController {
+    
+    var turnipPrices: TurnipPriceData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
+        registerNotifications()
+    }
+    
+    func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: .didCalculateResult, object: nil)
+    }
+    
+    @objc private func receiveData(_ noti: Notification) {
+        print(#function)
+        guard let data = noti.userInfo?["data"] as? TurnipPriceData else { return }
+        self.turnipPrices = data
+        
+        print("Received data: \(data)")
+        DispatchQueue.main.async {
+            self.setupView()
+        }
     }
     
     func setupView() {
-        let controller = UIHostingController(rootView: ChartView())
+        guard let data = turnipPrices else { return }
+        let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
+        print("dailyPriceData: \(dailyPriceData)")
+        
+        let controller = UIHostingController(rootView: ChartView(data: dailyPriceData))
         guard let chartView = controller.view else { return }
         
         chartView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(chartView)
         NSLayoutConstraint.activate([
-            chartView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            chartView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            chartView.heightAnchor.constraint(equalToConstant: 400)
+            chartView.topAnchor.constraint(equalTo: view.topAnchor),
+            chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            chartView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//            chartView.heightAnchor.constraint(equalToConstant: 400)
         ])
     }
 }
