@@ -10,10 +10,11 @@ import Foundation
 struct DailyPriceData: Identifiable {
     let id = UUID() // 고유 식별자 추가
     let day: String
-    let minDay: Double
-    let maxDay: Double
-    let minNight: Double
-    let maxNight: Double
+    let dayMin: Double
+    let dayMax: Double
+    let nightMin: Double
+    let nightMax: Double
+    let avgPattern: Double
 }
 
 extension DailyPriceData {
@@ -22,14 +23,15 @@ extension DailyPriceData {
         
         var dailyPriceDataArray: [DailyPriceData] = []
         
-        for (index, pattern) in turnipPriceData.minMaxPattern.enumerated() {
+        for (index, data) in turnipPriceData.minMaxPattern.enumerated() {
             if index < weekDays.count {
                 let dailyPriceData = DailyPriceData(
                     day: weekDays[index],
-                    minDay: Double(pattern[0]),
-                    maxDay: Double(pattern[1]),
-                    minNight: Double(pattern[0]),
-                    maxNight: Double(pattern[1])
+                    dayMin: Double(data[0]),
+                    dayMax: Double(data[1]),
+                    nightMin: Double(data[0]),
+                    nightMax: Double(data[1]),
+                    avgPattern: Double(turnipPriceData.avgPattern[index])
                 )
                 dailyPriceDataArray.append(dailyPriceData)
             }

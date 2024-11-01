@@ -38,7 +38,7 @@ final class ChartViewController: UIViewController {
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
         print("dailyPriceData: \(dailyPriceData)")
         
-        let controller = UIHostingController(rootView: ChartView(data: dailyPriceData))
+        let controller = UIHostingController(rootView: ChartView(dailyPriceData: dailyPriceData))
         guard let chartView = controller.view else { return }
         
         chartView.translatesAutoresizingMaskIntoConstraints = false

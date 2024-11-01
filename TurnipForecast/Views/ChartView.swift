@@ -9,37 +9,37 @@ import SwiftUI
 import Charts
 
 struct ChartView: View {
-    var data: [DailyPriceData]
-
+    var dailyPriceData: [DailyPriceData]
+    
     var body: some View {
-            Chart {
-                ForEach(data) { item in
-                    BarMark(
-                        x: .value("Temperature", item.minDay),
-                        y: .value("Day", "\(item.day) 낮")
-                    )
-                    .foregroundStyle(.white)
-                    
-                    BarMark(
-                        x: .value("Temperature", item.maxDay),
-                        y: .value("Day", "\(item.day) 낮")
-                    )
-                    .foregroundStyle(.orange.opacity(0.5))
-                    
-                    BarMark(
-                        x: .value("Temperature", item.minNight),
-                        y: .value("Day", "\(item.day) 밤")
-                    )
-                    .foregroundStyle(.white)
-                    
-                    BarMark(
-                        x: .value("Temperature", item.maxNight),
-                        y: .value("Day", "\(item.day) 밤")
-                    )
-                    .foregroundStyle(.blue.opacity(0.5))
+        Chart {
+            ForEach(dailyPriceData) { data in
+                BarMark(
+                    xStart: .value("Price", data.dayMin),
+                    xEnd: .value("Price", data.dayMax),
+                    y: .value("Day", "\(data.day) 낮")
+                )
+                .foregroundStyle(.orange)
+                .annotation(position: .trailing) {
+                    Text("\(Int(data.dayMin)) - \(Int(data.dayMax))")
+                        .font(.caption)
+                        .foregroundColor(.orange)
+                }
+                
+                BarMark(
+                    xStart: .value("Price", data.nightMin),
+                    xEnd: .value("Price", data.nightMax),
+                    y: .value("Day", "\(data.day) 밤")
+                )
+                .foregroundStyle(.indigo)
+                .annotation(position: .trailing) {
+                    Text("\(Int(data.nightMin)) - \(Int(data.nightMax))")
+                        .font(.caption)
+                        .foregroundColor(.indigo)
                 }
             }
-            .padding()
+        }
+        .padding()
     }
 }
 
