@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ResultViewController: UIViewController {
+final class ResultViewController: UIViewController {
     
     @IBOutlet weak var tablesView: UIView!
     @IBOutlet weak var graphView: UIView!

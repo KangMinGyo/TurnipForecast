@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TablesViewController: UIViewController {
+final class TablesViewController: UIViewController {
 
     @IBOutlet weak var pricesTableView: UITableView!
     var loadingIndicator: UIActivityIndicatorView!
@@ -62,7 +62,6 @@ class TablesViewController: UIViewController {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
 }
 
 extension TablesViewController: UITableViewDataSource {
