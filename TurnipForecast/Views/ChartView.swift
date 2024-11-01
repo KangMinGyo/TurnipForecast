@@ -21,7 +21,9 @@ struct ChartView: View {
                 )
                 .foregroundStyle(Color.Chart.dayColor)
                 .annotation(position: .trailing) {
-                    Text("\(Int(data.dayMin)) - \(Int(data.dayMax))")
+                    Text(data.dayMin == data.dayMax
+                        ? "\(Int(data.dayMin))"
+                        : "\(Int(data.dayMin)) - \(Int(data.dayMax))")
                         .font(.caption)
                         .foregroundColor(.black)
                 }
@@ -33,7 +35,9 @@ struct ChartView: View {
                 )
                 .foregroundStyle(Color.Chart.nightColor)
                 .annotation(position: .trailing) {
-                    Text("\(Int(data.nightMin)) - \(Int(data.nightMax))")
+                    Text(data.nightMin == data.nightMax
+                        ? "\(Int(data.nightMin))"
+                        : "\(Int(data.dayMin)) - \(Int(data.nightMax))")
                         .font(.caption)
                         .foregroundColor(.black)
                 }

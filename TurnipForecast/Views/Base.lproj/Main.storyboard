@@ -452,28 +452,31 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R03-uJ-Dwy">
-                                                    <rect key="frame" x="202.66666666666663" y="17.000000000000004" width="150.33333333333337" height="63.333333333333343"/>
+                                                    <rect key="frame" x="213" y="17.000000000000004" width="160" height="63.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 오전 : 78 ~ 100 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="21.666666666666668"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 오전 : 78 ~ 100 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="160" height="21.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙 오후 : 89 ~ 108 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-lW-o8Y">
-                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="150.33333333333334" height="21.666666666666664"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙 오후 : 890 ~ 108 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-lW-o8Y">
+                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="160" height="21.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="160" id="Nc3-F0-PUs"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="n5j-d7-5vi" firstAttribute="leading" secondItem="hJ7-0g-O9C" secondAttribute="leading" constant="20" id="HDo-GF-Nwx"/>
                                                 <constraint firstItem="R03-uJ-Dwy" firstAttribute="centerY" secondItem="hJ7-0g-O9C" secondAttribute="centerY" id="fui-gU-Ffz"/>
                                                 <constraint firstItem="n5j-d7-5vi" firstAttribute="centerY" secondItem="hJ7-0g-O9C" secondAttribute="centerY" id="sR2-0t-VcX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="R03-uJ-Dwy" secondAttribute="trailing" constant="20" id="xfq-5R-tkY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="R03-uJ-Dwy" secondAttribute="trailing" id="xfq-5R-tkY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
