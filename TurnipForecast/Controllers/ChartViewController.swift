@@ -48,7 +48,6 @@ final class ChartViewController: UIViewController {
             chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             chartView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-//            chartView.heightAnchor.constraint(equalToConstant: 400)
         ])
     }
 }
