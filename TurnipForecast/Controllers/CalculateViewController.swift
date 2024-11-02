@@ -19,6 +19,8 @@ final class CalculateViewController: UIViewController {
     
     let networkManager = NetworkManager()
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +28,9 @@ final class CalculateViewController: UIViewController {
         addKeyboardDismissGesture()
     }
     
-    func loadDataToTextFields() {
+    // MARK: - Data Loading
+    
+    private func loadDataToTextFields() {
         guard let purchasePrice = UserDefaults.standard.string(forKey: UserDefaultsKeys.purchasePrice) else { return }
         guard let savedTurnipPrices = UserDefaults.standard.stringArray(forKey: UserDefaultsKeys.turnipPrices) else { return }
         
@@ -36,7 +40,9 @@ final class CalculateViewController: UIViewController {
         }
     }
     
-    @IBAction func resetButtonTapped(_ sender: UIButton) {
+    // MARK: - Actions
+    
+    @IBAction private func resetButtonTapped(_ sender: UIButton) {
         print(#function)
         purchasePrice.text = ""
         
@@ -45,13 +51,15 @@ final class CalculateViewController: UIViewController {
         }
     }
     
-    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    @IBAction private func nextButtonPressed(_ sender: UIButton) {
         print(#function)
         fetchTurnipPrices()
         saveTurnipPricesToUserDefaults()
     }
     
-    func fetchTurnipPrices() {
+    // MARK: - Networking
+    
+    private func fetchTurnipPrices() {
         guard let purchasePrice = purchasePrice.text else { return }
         
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice, dailyPrices: turnipPrices) { data in
@@ -64,13 +72,16 @@ final class CalculateViewController: UIViewController {
         }
     }
     
-    func saveTurnipPricesToUserDefaults() {
+    // MARK: - User Defaults
+    
+    private func saveTurnipPricesToUserDefaults() {
         UserDefaults.standard.set(purchasePrice, forKey: UserDefaultsKeys.purchasePrice)
         UserDefaults.standard.set(turnipPrices, forKey: UserDefaultsKeys.turnipPrices)
         print("Data가 UserDefaults에 저장되었습니다.")
     }
     
-    // 특정 타겟과 액션을 설정하여 탭이 발생할 때 실행할 메서드를 지정
+    // MARK: - Gesture Recognizers
+
     private func addKeyboardDismissGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
