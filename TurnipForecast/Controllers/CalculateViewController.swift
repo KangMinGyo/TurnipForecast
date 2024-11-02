@@ -21,8 +21,19 @@ final class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        loadDataToTextFields()
         addKeyboardDismissGesture()
+    }
+    
+    func loadDataToTextFields() {
+        guard let purchasePrice = UserDefaults.standard.string(forKey: UserDefaultsKeys.purchasePrice) else { return }
+        guard let savedTurnipPrices = UserDefaults.standard.stringArray(forKey: UserDefaultsKeys.turnipPrices) else { return }
+        
+        self.purchasePrice.text = purchasePrice
+        for (textField, price) in zip(dailyTurnipPrices, savedTurnipPrices) {
+            textField.text = price
+        }
     }
     
     @IBAction func resetButtonTapped(_ sender: UIButton) {
@@ -34,10 +45,13 @@ final class CalculateViewController: UIViewController {
         }
     }
     
-    
-    @IBAction func fetchTurnipPriceButtonTapped(_ sender: UIButton) {
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
         print(#function)
-        
+        fetchTurnipPrices()
+        saveTurnipPricesToUserDefaults()
+    }
+    
+    func fetchTurnipPrices() {
         guard let purchasePrice = purchasePrice.text else { return }
         
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice, dailyPrices: turnipPrices) { data in
@@ -48,6 +62,12 @@ final class CalculateViewController: UIViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func saveTurnipPricesToUserDefaults() {
+        UserDefaults.standard.set(purchasePrice, forKey: UserDefaultsKeys.purchasePrice)
+        UserDefaults.standard.set(turnipPrices, forKey: UserDefaultsKeys.turnipPrices)
+        print("Data가 UserDefaults에 저장되었습니다.")
     }
     
     // 특정 타겟과 액션을 설정하여 탭이 발생할 때 실행할 메서드를 지정

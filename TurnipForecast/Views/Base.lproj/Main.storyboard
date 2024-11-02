@@ -285,7 +285,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <action selector="fetchTurnipPriceButtonTapped:" destination="rLt-UG-luj" eventType="touchUpInside" id="kig-6S-65G"/>
+                                                            <action selector="nextButtonPressed:" destination="rLt-UG-luj" eventType="touchUpInside" id="kig-6S-65G"/>
                                                             <segue destination="144-LP-Bb8" kind="show" id="vst-C5-DmZ"/>
                                                         </connections>
                                                     </button>

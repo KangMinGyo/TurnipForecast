@@ -16,3 +16,9 @@ public struct Cell {
     static let pricesCellIdentifier = "PricesCell"
     private init() {}
 }
+
+struct UserDefaultsKeys {
+    static let purchasePrice = "purchasePrice"
+    static let turnipPrices = "turnipPrices"
+    private init() {}
+}
