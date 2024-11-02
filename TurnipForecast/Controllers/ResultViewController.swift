@@ -14,6 +14,8 @@ final class ResultViewController: UIViewController {
     
     var turnipPrices: [String] = []
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +23,8 @@ final class ResultViewController: UIViewController {
         graphView.isHidden = true
     }
 
+    // MARK: - Actions
+    
     @IBAction func changeView(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
