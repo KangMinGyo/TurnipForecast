@@ -11,8 +11,10 @@ final class TablesViewController: UIViewController {
 
     @IBOutlet weak var pricesTableView: UITableView!
     var loadingIndicator: UIActivityIndicatorView!
-    
+
     var turnipPrices: TurnipPriceData?
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,8 @@ final class TablesViewController: UIViewController {
         pricesTableView.reloadData()
     }
     
+    // MARK: - Setup Methods
+    
     private func setupTableView() {
         pricesTableView.dataSource = self
         pricesTableView.rowHeight = 100
@@ -41,6 +45,8 @@ final class TablesViewController: UIViewController {
         view.addSubview(loadingIndicator)
         loadingIndicator.startAnimating() // 로딩 시작
     }
+    
+    // MARK: - Notifications
     
     func registerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: .didCalculateResult, object: nil)
@@ -64,6 +70,8 @@ final class TablesViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+
 extension TablesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,9 +83,8 @@ extension TablesViewController: UITableViewDataSource {
         guard let data = turnipPrices else { return UITableViewCell() }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
         cell.dailyPriceData = dailyPriceData[indexPath.row]
-        
         cell.isUserInteractionEnabled = false
+        
         return cell
     }
 }
-

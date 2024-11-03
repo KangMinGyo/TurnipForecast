@@ -19,7 +19,7 @@ final class CalculateViewController: UIViewController {
     
     let networkManager = NetworkManager()
     
-    // MARK: - Lifecycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +75,7 @@ final class CalculateViewController: UIViewController {
     // MARK: - User Defaults
     
     private func saveTurnipPricesToUserDefaults() {
-        UserDefaults.standard.set(purchasePrice, forKey: UserDefaultsKeys.purchasePrice)
+        UserDefaults.standard.set(purchasePrice.text, forKey: UserDefaultsKeys.purchasePrice)
         UserDefaults.standard.set(turnipPrices, forKey: UserDefaultsKeys.turnipPrices)
         print("Data가 UserDefaults에 저장되었습니다.")
     }
