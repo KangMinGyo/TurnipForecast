@@ -38,12 +38,15 @@ final class TablesViewController: UIViewController {
     }
     
     private func setupLoadingIndicator() {
-        pricesTableView.isHidden = true
-        
         loadingIndicator = UIActivityIndicatorView(style: .medium)
-        loadingIndicator.center = view.center
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loadingIndicator)
-        loadingIndicator.startAnimating() // 로딩 시작
+        
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -60)
+        ])
+        loadingIndicator.startAnimating()
     }
     
     // MARK: - Notifications
@@ -59,9 +62,9 @@ final class TablesViewController: UIViewController {
         
         DispatchQueue.main.async {
             self.pricesTableView.reloadData()
-            self.loadingIndicator.stopAnimating() // 로딩 중지
+            self.loadingIndicator.stopAnimating()
             self.loadingIndicator.isHidden = true
-            self.pricesTableView.isHidden = false // 데이터 로딩 후 테이블 뷰 표시
+            self.pricesTableView.isHidden = false
         }
     }
     

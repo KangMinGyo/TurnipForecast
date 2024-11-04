@@ -30,8 +30,7 @@ final class ChartViewController: UIViewController {
         print(#function)
         guard let data = noti.userInfo?["data"] as? TurnipPriceData else { return }
         self.turnipPrices = data
-        
-        print("Received data: \(data)")
+
         DispatchQueue.main.async {
             self.prepareChartData()
         }
