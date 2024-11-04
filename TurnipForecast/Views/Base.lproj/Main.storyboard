@@ -330,7 +330,14 @@
                             <constraint firstItem="CpB-KV-bfC" firstAttribute="leading" secondItem="8QT-bn-gFn" secondAttribute="leading" id="J6Y-7s-uXb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="무 주식 계산기" id="67h-qO-uoT"/>
+                    <navigationItem key="navigationItem" title="무 주식 계산기" id="67h-qO-uoT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="aou-mW-raS">
+                            <color key="tintColor" name="ButtonBackgroundColor"/>
+                            <connections>
+                                <segue destination="dGN-MI-JW3" kind="presentation" id="KkJ-QP-Wxp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="purchasePrice" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
                         <outletCollection property="dailyTurnipPrices" destination="gBW-0H-oyl" collectionClass="NSMutableArray" id="SS4-8F-Ju2"/>
@@ -350,6 +357,127 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="585-Us-OPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3990" y="-61"/>
+        </scene>
+        <!--Guide View Controller-->
+        <scene sceneID="qpi-VH-Qu4">
+            <objects>
+                <viewController id="dGN-MI-JW3" customClass="GuideViewController" customModule="TurnipForecast" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zqG-XP-KpN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jI9-rl-z3f">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbR-m3-qgB">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무 주식 계산기 사용법" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcH-oH-Ih9">
+                                                <rect key="frame" x="20" y="40" width="353" height="28.666666666666671"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Yfz-pC-AE4">
+                                                <rect key="frame" x="20" y="108.66666666666669" width="353" height="713.33333333333326"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 매수가" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsh-AF-cHK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="매주 일요일, 무파니에게 무를 구매해주세요.  무의 가격을 매수가란에 입력해주세요. 이 가격은 한 주 동안의 거래 기준 가격이 됩니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62T-hT-cs5">
+                                                        <rect key="frame" x="0.0" y="65.666666666666671" width="353" height="61"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. 가격 입력" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0i-d1-hE1">
+                                                        <rect key="frame" x="0.0" y="168.33333333333331" width="353" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월요일부터 토요일까지,  오전과 오후 무 가격을 입력합니다. 각각의 날짜와 시간대에 맞게 값을 기록하면, 프로그램이 데이터를 사용해 예측할 수 있습니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9Q-Wf-7i7">
+                                                        <rect key="frame" x="0.0" y="234.00000000000003" width="353" height="81.333333333333343"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. 무 값 확인하기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtz-tU-dMo">
+                                                        <rect key="frame" x="0.0" y="357.33333333333331" width="353" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="데이터를 입력하고 나면,  프로그램이 예측 가격을 보여줍니다. 데이터를 많이 입력할 수록 정확도가 높아집니다. 예측 가격을 통해 남은 기간 동안의 무 주식 가격 변동을 확인할 수 있습니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb3-sA-Zby">
+                                                        <rect key="frame" x="0.0" y="422.99999999999994" width="353" height="101.66666666666669"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. 초기화" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj3-K8-2QM">
+                                                        <rect key="frame" x="0.0" y="566.33333333333337" width="353" height="24"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입력한 데이터를 초기화하고 새로운 데이터를 입력하고 싶을 때는 초기화 버튼을 누르세요. 초기화 버튼을 누르기 전까지 입력된 데이터는 저장됩니다." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfd-G4-BxM">
+                                                        <rect key="frame" x="0.0" y="632" width="353" height="81.333333333333371"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="WcH-oH-Ih9" secondAttribute="trailing" constant="20" id="0ed-Dc-3Bu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yfz-pC-AE4" secondAttribute="trailing" constant="20" id="2Ir-YN-wss"/>
+                                            <constraint firstItem="Yfz-pC-AE4" firstAttribute="leading" secondItem="zbR-m3-qgB" secondAttribute="leading" constant="20" id="ZcK-uY-ZFb"/>
+                                            <constraint firstItem="Yfz-pC-AE4" firstAttribute="top" secondItem="WcH-oH-Ih9" secondAttribute="bottom" constant="40" id="hMM-Kd-WBS"/>
+                                            <constraint firstItem="WcH-oH-Ih9" firstAttribute="leading" secondItem="zbR-m3-qgB" secondAttribute="leading" constant="20" id="iwi-Re-xCc"/>
+                                            <constraint firstItem="WcH-oH-Ih9" firstAttribute="top" secondItem="zbR-m3-qgB" secondAttribute="top" constant="40" id="rbe-gI-hbL"/>
+                                            <constraint firstAttribute="bottom" secondItem="Yfz-pC-AE4" secondAttribute="bottom" constant="20" id="xej-4P-D1d"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="zbR-m3-qgB" firstAttribute="width" secondItem="jI9-rl-z3f" secondAttribute="width" id="E6k-T1-OvR"/>
+                                    <constraint firstAttribute="trailing" secondItem="zbR-m3-qgB" secondAttribute="trailing" id="QXf-Gy-fbd"/>
+                                    <constraint firstItem="zbR-m3-qgB" firstAttribute="leading" secondItem="jI9-rl-z3f" secondAttribute="leading" id="bAX-yf-WYu"/>
+                                    <constraint firstItem="zbR-m3-qgB" firstAttribute="height" secondItem="jI9-rl-z3f" secondAttribute="height" priority="250" id="h1E-iY-ybd"/>
+                                    <constraint firstAttribute="bottom" secondItem="zbR-m3-qgB" secondAttribute="bottom" id="kNL-F3-Q7V"/>
+                                    <constraint firstItem="zbR-m3-qgB" firstAttribute="top" secondItem="jI9-rl-z3f" secondAttribute="top" id="zpo-dR-8FA"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gZc-2o-N0d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jI9-rl-z3f" firstAttribute="leading" secondItem="gZc-2o-N0d" secondAttribute="leading" id="VU3-w5-cfN"/>
+                            <constraint firstItem="jI9-rl-z3f" firstAttribute="bottom" secondItem="gZc-2o-N0d" secondAttribute="bottom" id="XrT-eC-9so"/>
+                            <constraint firstItem="jI9-rl-z3f" firstAttribute="top" secondItem="gZc-2o-N0d" secondAttribute="top" id="YVn-9L-3nB"/>
+                            <constraint firstItem="jI9-rl-z3f" firstAttribute="trailing" secondItem="gZc-2o-N0d" secondAttribute="trailing" id="vhG-Aq-Z6D"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="body1Label" destination="62T-hT-cs5" id="gWu-wM-j1l"/>
+                        <outlet property="body2Label" destination="G9Q-Wf-7i7" id="PiA-KQ-RYC"/>
+                        <outlet property="body3Label" destination="Sb3-sA-Zby" id="8zm-Dt-HFD"/>
+                        <outlet property="body4Label" destination="Mfd-G4-BxM" id="pPe-Ry-RJg"/>
+                        <outlet property="subtitle1Label" destination="gsh-AF-cHK" id="p4I-4g-gIP"/>
+                        <outlet property="subtitle2Label" destination="F0i-d1-hE1" id="abh-pt-7Uq"/>
+                        <outlet property="subtitle3Label" destination="dtz-tU-dMo" id="3Lp-35-bjz"/>
+                        <outlet property="subtitle4Label" destination="tj3-K8-2QM" id="4BL-jj-hRi"/>
+                        <outlet property="titleLabel" destination="WcH-oH-Ih9" id="ftu-0T-3cp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEe-Xf-VKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4814.5038167938928" y="-401.40845070422534"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Xar-U5-UXf">
@@ -406,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diI-oj-9We" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4754.9618320610689" y="-61.267605633802823"/>
+            <point key="canvasLocation" x="4815" y="296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PWf-bR-X9K">
@@ -503,7 +631,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWT-2b-Dqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5626.7175572519081" y="-336.61971830985919"/>
+            <point key="canvasLocation" x="5723" y="4"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="rL8-yQ-wJ7">
@@ -518,10 +646,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6u-KP-grL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5628" y="294"/>
+            <point key="canvasLocation" x="5723" y="604"/>
         </scene>
     </scenes>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <namedColor name="BackgroundColor">
             <color red="0.53299999237060547" green="0.76099997758865356" blue="0.45100000500679016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -24,6 +24,7 @@
 		8CC393412CC934D200B5656E /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8CC393402CC934D200B5656E /* Base */; };
 		8CE05A2D2CD4EFC5000C0F94 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE05A2C2CD4EFC5000C0F94 /* Color+Extension.swift */; };
 		8CE05A302CD4F048000C0F94 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE05A2F2CD4F048000C0F94 /* Notification+Extension.swift */; };
+		8CE05A322CD90A42000C0F94 /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE05A312CD90A42000C0F94 /* GuideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		8CC393422CC934D200B5656E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CE05A2C2CD4EFC5000C0F94 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		8CE05A2F2CD4F048000C0F94 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		8CE05A312CD90A42000C0F94 /* GuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8C1906932CD200AA0077BF04 /* ResultViewController.swift */,
 				8C1906972CD245F50077BF04 /* TablesViewController.swift */,
 				8C1906992CD26CE40077BF04 /* ChartViewController.swift */,
+				8CE05A312CD90A42000C0F94 /* GuideViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				8C1906942CD200AA0077BF04 /* ResultViewController.swift in Sources */,
 				8C19068F2CD095110077BF04 /* NetworkManager.swift in Sources */,
 				8CC393372CC934D000B5656E /* SceneDelegate.swift in Sources */,
+				8CE05A322CD90A42000C0F94 /* GuideViewController.swift in Sources */,
 				8C19069F2CD3548C0077BF04 /* ChartView.swift in Sources */,
 				8C1906962CD21D4B0077BF04 /* PricesCell.swift in Sources */,
 				8C19068C2CCE76940077BF04 /* TurnipPriceData.swift in Sources */,
