@@ -14,7 +14,7 @@ final class ResultViewController: UIViewController {
     
     var turnipPrices: [String] = []
     
-    // MARK: - Lifecycle
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

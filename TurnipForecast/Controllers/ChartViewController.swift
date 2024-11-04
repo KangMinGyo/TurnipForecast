@@ -12,11 +12,15 @@ final class ChartViewController: UIViewController {
     
     var turnipPrices: TurnipPriceData?
 
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         registerNotifications()
     }
+    
+    // MARK: - Notifications
     
     func registerNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.receiveData), name: .didCalculateResult, object: nil)
@@ -29,20 +33,25 @@ final class ChartViewController: UIViewController {
         
         print("Received data: \(data)")
         DispatchQueue.main.async {
-            self.setupView()
+            self.prepareChartData()
         }
     }
     
-    func setupView() {
+    //  MARK: - Setup Chart View
+    
+    func prepareChartData() {
         guard let data = turnipPrices else { return }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
-        print("dailyPriceData: \(dailyPriceData)")
-        
+        setupChartView(with: dailyPriceData)
+    }
+    
+    private func setupChartView(with dailyPriceData: [DailyPriceData]) {
         let controller = UIHostingController(rootView: ChartView(dailyPriceData: dailyPriceData))
-        guard let chartView = controller.view else { return }
         
+        guard let chartView = controller.view else { return }
         chartView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(chartView)
+        
         NSLayoutConstraint.activate([
             chartView.topAnchor.constraint(equalTo: view.topAnchor),
             chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
