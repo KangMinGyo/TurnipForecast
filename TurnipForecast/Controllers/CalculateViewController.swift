@@ -10,8 +10,8 @@ import UIKit
 final class CalculateViewController: UIViewController {
     
     @IBOutlet weak var purchasePrice: UITextField!
-    
     @IBOutlet var dailyTurnipPrices: [UITextField]!
+    @IBOutlet weak var nextButton: UIButton!
     
     var turnipPrices: [String] {
         return dailyTurnipPrices.map { $0.text ?? "" }
@@ -23,9 +23,28 @@ final class CalculateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        checkTextFieldContent()
         loadDataToTextFields()
         addKeyboardDismissGesture()
+        
+        purchasePrice.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+    }
+    
+    // MARK: - TextField Validation
+    
+    @objc private func textFieldEditingChanged(_ textField: UITextField) {
+        checkTextFieldContent()
+    }
+    
+    private func checkTextFieldContent() {
+        if let purchasePrice = purchasePrice.text, !purchasePrice.isEmpty {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = UIColor(named: "BackgroundColor")
+        } else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .systemGray3
+        }
     }
     
     // MARK: - Data Loading
@@ -91,5 +110,3 @@ final class CalculateViewController: UIViewController {
         view.endEditing(true)
     }
 }
-
-

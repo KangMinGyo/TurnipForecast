@@ -339,6 +339,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="nextButton" destination="oO2-e8-6nc" id="5sb-CL-Oie"/>
                         <outlet property="purchasePrice" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
                         <outletCollection property="dailyTurnipPrices" destination="gBW-0H-oyl" collectionClass="NSMutableArray" id="SS4-8F-Ju2"/>
                         <outletCollection property="dailyTurnipPrices" destination="xQJ-TE-yA3" collectionClass="NSMutableArray" id="wVS-oU-Yhd"/>
@@ -573,8 +574,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월요일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5j-d7-5vi">
-                                                    <rect key="frame" x="20" y="37.666666666666664" width="47" height="21.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5j-d7-5vi">
+                                                    <rect key="frame" x="20" y="37.666666666666664" width="31.333333333333329" height="21.666666666666664"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -582,13 +583,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R03-uJ-Dwy">
                                                     <rect key="frame" x="213" y="17.000000000000004" width="160" height="63.333333333333343"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 오전 : 78 ~ 100 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 오전 : 무 값" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
                                                             <rect key="frame" x="0.0" y="0.0" width="160" height="21.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙 오후 : 890 ~ 108 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-lW-o8Y">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙 오후 : 무 값 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-lW-o8Y">
                                                             <rect key="frame" x="0.0" y="41.666666666666664" width="160" height="21.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
@@ -631,7 +632,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWT-2b-Dqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5723" y="4"/>
+            <point key="canvasLocation" x="5722.900763358778" y="3.5211267605633805"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="rL8-yQ-wJ7">
