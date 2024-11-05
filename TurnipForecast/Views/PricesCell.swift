@@ -18,11 +18,11 @@ final class PricesCell: UITableViewCell {
             guard let data = dailyPriceData else { return }
             dayLabel.text = data.day
             dayTimePrice.text = data.dayMin == data.dayMax
-            ? "☀️ 오전 : \(Int(data.dayMin))"
-            : "☀️ 오전 : \(Int(data.dayMin)) - \(Int(data.dayMax))"
+            ? "☀️ \(Int(data.dayMin))"
+            : "☀️ \(Int(data.dayMin)) - \(Int(data.dayMax))"
             nightTimePrice.text = data.nightMin == data.nightMax
-            ? "🌙 오후 : \(Int(data.nightMin))"
-            :"🌙 오후 : \(Int(data.nightMin)) - \(Int(data.nightMax))"
+            ? "🌙 \(Int(data.nightMin))"
+            :"🌙 \(Int(data.nightMin)) - \(Int(data.nightMax))"
         }
     }
     

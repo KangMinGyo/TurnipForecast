@@ -17,7 +17,7 @@ struct ChartView: View {
                 BarMark(
                     xStart: .value("Price", data.dayMin),
                     xEnd: .value("Price", data.dayMax + 1),
-                    y: .value("Day", "\(data.day) 오전")
+                    y: .value("Day", "\(data.day) ☀️")
                 )
                 .foregroundStyle(Color.Chart.dayColor)
                 .annotation(position: .trailing) {
@@ -31,7 +31,7 @@ struct ChartView: View {
                 BarMark(
                     xStart: .value("Price", data.nightMin),
                     xEnd: .value("Price", data.nightMax + 1),
-                    y: .value("Day", "\(data.day) 오후")
+                    y: .value("Day", "\(data.day) 🌙")
                 )
                 .foregroundStyle(Color.Chart.nightColor)
                 .annotation(position: .trailing) {

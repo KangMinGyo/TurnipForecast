@@ -6,18 +6,28 @@
   
 */
 
-// MARK: - GuideViewController
+/* Weekdays Localization */
 
-"Guide_Title" = "Turnip Stock Calculator Guide";
+"monday" = "Monday";
+"tuesday" = "Tuesday";
+"wednesday" = "Wednesday";
+"thursday" = "Thursday";
+"friday" = "Friday";
+"saturday" = "Saturday";
 
-"Guide_Subtitle1" = "1. Purchase";
-"Guide_Body1" = "Each Sunday, purchase turnips from Daisy Mae. \nEnter the purchase price in the 'Purchase Price' field. \nThis price will serve as the base for the week's transactions.";
 
-"Guide_Subtitle2" = "2. Enter Prices";
-"Guide_Body2" = "From Monday to Saturday, \ninput the turnip prices for both morning and afternoon. \nWhen you record prices for each date and time, \nthe program can use this data to make predictions.";
+/* GuideViewController Localization */
 
-"Guide_Subtitle3" = "3. Check Predicted Prices";
-"Guide_Body3" = "After entering the data, \nthe program will display the predicted prices.\nThe more data you enter, the more accurate the prediction.\nCheck the predicted prices to view turnip price trends for the remaining days.";
+"guide_title" = "Turnip Stock Calculator Guide";
 
-"Guide_Subtitle4" = "4. Reset";
-"Guide_Body4" = "If you want to clear the data and enter new information, \npress the reset button.\nData will be saved until you press the reset button.";
+"guide_subtitle1" = "1. Purchase";
+"guide_body1" = "Each Sunday, purchase turnips from Daisy Mae. \nEnter the purchase price in the 'Purchase Price' field. \nThis price will serve as the base for the week's transactions.";
+
+"guide_subtitle2" = "2. Enter Prices";
+"guide_body2" = "From Monday to Saturday, \ninput the turnip prices for both morning and afternoon. \nWhen you record prices for each date and time, \nthe program can use this data to make predictions.";
+
+"guide_subtitle3" = "3. Check Predicted Prices";
+"guide_body3" = "After entering the data, \nthe program will display the predicted prices.\nThe more data you enter, the more accurate the prediction.\nCheck the predicted prices to view turnip price trends for the remaining days.";
+
+"guide_subtitle4" = "4. Reset";
+"guide_body4" = "If you want to clear the data and enter new information, \npress the reset button.\nData will be saved until you press the reset button.";

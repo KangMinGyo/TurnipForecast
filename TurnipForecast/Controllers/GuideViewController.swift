@@ -31,18 +31,18 @@ final class GuideViewController: UIViewController {
     // MARK: - Configuration
     
     func configureGuideLabels() {
-        titleLabel.text = "Guide_Title".localized
+        titleLabel.text = "guide_title".localized
         
-        subtitle1Label.text = "Guide_Subtitle1".localized
-        body1Label.text = "Guide_Body1".localized
+        subtitle1Label.text = "guide_subtitle1".localized
+        body1Label.text = "guide_body1".localized
         
-        subtitle2Label.text = "Guide_Subtitle2".localized
-        body2Label.text = "Guide_Body2".localized
+        subtitle2Label.text = "guide_subtitle2".localized
+        body2Label.text = "guide_body1".localized
         
-        subtitle3Label.text = "Guide_Subtitle3".localized
-        body3Label.text = "Guide_Body3".localized
+        subtitle3Label.text = "guide_subtitle3".localized
+        body3Label.text = "guide_body1".localized
         
-        subtitle4Label.text = "Guide_Subtitle4".localized
-        body4Label.text = "Guide_Body4".localized
+        subtitle4Label.text = "guide_subtitle4".localized
+        body4Label.text = "guide_body1".localized
     }
 }

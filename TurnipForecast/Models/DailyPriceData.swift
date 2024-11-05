@@ -19,7 +19,7 @@ struct DailyPriceData: Identifiable {
 
 extension DailyPriceData {
     static func convertFromTurnipPriceData(turnipPriceData: TurnipPriceData) -> [DailyPriceData] {
-        let weekDays = ["월요일", "화요일", "수요일", "목요일", "금요일", "토요일"]
+        let weekDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map { $0.localized }
         
         var dailyPriceDataArray: [DailyPriceData] = []
         
