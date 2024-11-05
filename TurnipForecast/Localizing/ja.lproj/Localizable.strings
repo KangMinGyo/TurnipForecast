@@ -6,9 +6,6 @@
   
 */
 
-"segment_one" = "テーブル";
-"segment_two" = "グラフ";
-
 /* Weekdays Localization */
 
 "monday" = "月曜日";
@@ -19,9 +16,23 @@
 "saturday" = "土曜日";
 
 
+/* CalculateViewController Localization */
+
+"navi_title" = "カブ価予測ツール";
+"purchase_price" = "購入価格";
+"initialize_button" = "リセット";
+"next_button" = "予測価格の確認";
+
+
+/* ResultViewController Localization */
+
+"segment_one" = "テーブル";
+"segment_two" = "グラフ";
+
+
 /* GuideViewController Localization */
 
-"guide_title" = "カブ価格計算ガイド";
+"guide_title" = "カブが予測ツールの使い方";
 
 "guide_subtitle1" = "1. 購入";
 "guide_body1" = "毎週日曜日にウリからカブを購入してください。 \n購入価格を「購入価格」欄に入力してください。 \nこの価格は一週間の取引基準となります。";

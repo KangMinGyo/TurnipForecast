@@ -339,7 +339,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="initializeButton" destination="dWB-rq-2s0" id="P4q-gg-6hx"/>
                         <outlet property="nextButton" destination="oO2-e8-6nc" id="5sb-CL-Oie"/>
+                        <outlet property="purchaseLabel" destination="bg6-0A-Ryc" id="ydk-OM-N3m"/>
                         <outlet property="purchasePrice" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
                         <outletCollection property="dailyTurnipPrices" destination="gBW-0H-oyl" collectionClass="NSMutableArray" id="SS4-8F-Ju2"/>
                         <outletCollection property="dailyTurnipPrices" destination="xQJ-TE-yA3" collectionClass="NSMutableArray" id="wVS-oU-Yhd"/>
@@ -353,6 +355,12 @@
                         <outletCollection property="dailyTurnipPrices" destination="wUf-PT-BE0" collectionClass="NSMutableArray" id="Ex4-2k-f28"/>
                         <outletCollection property="dailyTurnipPrices" destination="fSY-q2-t3v" collectionClass="NSMutableArray" id="tzp-bf-OOo"/>
                         <outletCollection property="dailyTurnipPrices" destination="MB7-46-Tk6" collectionClass="NSMutableArray" id="AgL-eh-cBu"/>
+                        <outletCollection property="dayLabels" destination="YUJ-6X-Bej" collectionClass="NSMutableArray" id="IQO-Rn-a2n"/>
+                        <outletCollection property="dayLabels" destination="J1n-yb-l55" collectionClass="NSMutableArray" id="PWw-yi-zEG"/>
+                        <outletCollection property="dayLabels" destination="Lha-N6-ZRf" collectionClass="NSMutableArray" id="iXE-5b-3p8"/>
+                        <outletCollection property="dayLabels" destination="2oQ-Re-cah" collectionClass="NSMutableArray" id="f8A-O3-cVK"/>
+                        <outletCollection property="dayLabels" destination="DZ5-fS-8MW" collectionClass="NSMutableArray" id="q8C-zL-bwl"/>
+                        <outletCollection property="dayLabels" destination="VWY-HP-h5H" collectionClass="NSMutableArray" id="els-wy-NRg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="585-Us-OPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

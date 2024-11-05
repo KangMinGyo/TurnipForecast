@@ -9,8 +9,13 @@ import UIKit
 
 final class CalculateViewController: UIViewController {
     
+    @IBOutlet weak var purchaseLabel: UILabel!
+    @IBOutlet var dayLabels: [UILabel]!
+    
     @IBOutlet weak var purchasePrice: UITextField!
     @IBOutlet var dailyTurnipPrices: [UITextField]!
+    
+    @IBOutlet weak var initializeButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     var turnipPrices: [String] {
@@ -24,11 +29,28 @@ final class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureLocalization()
         checkTextFieldContent()
         loadDataToTextFields()
         addKeyboardDismissGesture()
-        
         purchasePrice.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
+    }
+    
+    // MARK: - Localization
+    
+    private func configureLocalization() {
+        self.navigationItem.title = "navi_title".localized
+        
+        purchaseLabel.text = "purchase_price".localized
+        purchasePrice.placeholder = "purchase_price".localized
+        
+        let weekDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map { $0.localized }
+        weekDays.enumerated().forEach { index, dayKey in
+            dayLabels[index].text = dayKey
+        }
+        
+        initializeButton.setTitle("initialize_button".localized, for: .normal)
+        nextButton.setTitle("next_button".localized, for: .normal)
     }
     
     // MARK: - TextField Validation

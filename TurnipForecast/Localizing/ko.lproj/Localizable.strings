@@ -8,9 +8,6 @@
 
 // "" = "";
 
-"segment_one" = "표";
-"segment_two" = "그래프";
-
 /* Weekdays Localization */
 
 "monday" = "월요일";
@@ -19,6 +16,20 @@
 "thursday" = "목요일";
 "friday" = "금요일";
 "saturday" = "토요일";
+
+
+/* CalculateViewController Localization */
+
+"navi_title" = "무 주식 계산기";
+"purchase_price" = "매수가";
+"initialize_button" = "초기화";
+"next_button" = "무 값 확인하기";
+
+
+/* ResultViewController Localization */
+
+"segment_one" = "표";
+"segment_two" = "그래프";
 
 
 /* GuideViewController Localization */

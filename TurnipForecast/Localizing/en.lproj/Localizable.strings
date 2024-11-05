@@ -6,17 +6,27 @@
   
 */
 
-"segment_one" = "Table";
-"segment_two" = "Graph";
-
 /* Weekdays Localization */
 
-"monday" = "Monday";
-"tuesday" = "Tuesday";
-"wednesday" = "Wednesday";
-"thursday" = "Thursday";
-"friday" = "Friday";
-"saturday" = "Saturday";
+"monday" = "MON";
+"tuesday" = "TUE";
+"wednesday" = "WED";
+"thursday" = "THU";
+"friday" = "FRI";
+"saturday" = "SAT";
+
+/* CalculateViewController Localization */
+
+"navi_title" = "Turnip Stock Calculator";
+"purchase_price" = "Buy Price";
+"initialize_button" = "Reset";
+"next_button" = "View Prices";
+
+
+/* ResultViewController Localization */
+
+"segment_one" = "Table";
+"segment_two" = "Graph";
 
 
 /* GuideViewController Localization */
