@@ -20,6 +20,12 @@ final class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupUI()
+    }
+    
+    // MARK: - Setup UI
+    
+    private func setupUI() {
         navigationController?.navigationBar.tintColor = .label
         segmentedControl.setTitle("segment_one".localized, forSegmentAt: 0)
         segmentedControl.setTitle("segment_two".localized, forSegmentAt: 1)
