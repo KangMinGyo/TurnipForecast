@@ -6,6 +6,9 @@
   
 */
 
+"segment_one" = "テーブル";
+"segment_two" = "グラフ";
+
 /* Weekdays Localization */
 
 "monday" = "月曜日";

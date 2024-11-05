@@ -79,13 +79,13 @@
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-LX-YmM">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUj-LX-YmM">
                                                                                 <rect key="frame" x="111" y="0.0" width="91" height="47"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오후" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxq-kr-m82">
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxq-kr-m82">
                                                                                 <rect key="frame" x="222" y="0.0" width="91" height="47"/>
                                                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -530,6 +530,7 @@
                     <navigationItem key="navigationItem" id="Wk1-LW-5rU"/>
                     <connections>
                         <outlet property="graphView" destination="ETd-rZ-43R" id="YkA-5g-do3"/>
+                        <outlet property="segmentedControl" destination="5Ql-X7-KUc" id="J5l-bA-MBg"/>
                         <outlet property="tablesView" destination="3pR-6I-2oI" id="FMO-1d-C6s"/>
                     </connections>
                 </viewController>

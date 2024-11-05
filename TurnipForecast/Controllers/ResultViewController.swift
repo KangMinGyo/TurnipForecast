@@ -11,6 +11,7 @@ final class ResultViewController: UIViewController {
     
     @IBOutlet weak var tablesView: UIView!
     @IBOutlet weak var graphView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     var turnipPrices: [String] = []
     
@@ -20,6 +21,8 @@ final class ResultViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.tintColor = .label
+        segmentedControl.setTitle("segment_one".localized, forSegmentAt: 0)
+        segmentedControl.setTitle("segment_two".localized, forSegmentAt: 1)
         graphView.isHidden = true
     }
 

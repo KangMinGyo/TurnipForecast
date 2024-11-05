@@ -8,6 +8,9 @@
 
 // "" = "";
 
+"segment_one" = "표";
+"segment_two" = "그래프";
+
 /* Weekdays Localization */
 
 "monday" = "월요일";
@@ -17,8 +20,6 @@
 "friday" = "금요일";
 "saturday" = "토요일";
 
-"day" = "오전";
-"night" = "오후";
 
 /* GuideViewController Localization */
 
