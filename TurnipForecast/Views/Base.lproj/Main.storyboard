@@ -342,7 +342,7 @@
                         <outlet property="initializeButton" destination="dWB-rq-2s0" id="P4q-gg-6hx"/>
                         <outlet property="nextButton" destination="oO2-e8-6nc" id="5sb-CL-Oie"/>
                         <outlet property="purchaseLabel" destination="bg6-0A-Ryc" id="ydk-OM-N3m"/>
-                        <outlet property="purchasePrice" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
+                        <outlet property="purchasePriceTextField" destination="Wfw-dO-k1T" id="ja9-Qc-Uuh"/>
                         <outletCollection property="dailyTurnipPrices" destination="gBW-0H-oyl" collectionClass="NSMutableArray" id="SS4-8F-Ju2"/>
                         <outletCollection property="dailyTurnipPrices" destination="xQJ-TE-yA3" collectionClass="NSMutableArray" id="wVS-oU-Yhd"/>
                         <outletCollection property="dailyTurnipPrices" destination="W5U-nj-M8J" collectionClass="NSMutableArray" id="7Ni-F6-GoY"/>
@@ -361,6 +361,8 @@
                         <outletCollection property="dayLabels" destination="2oQ-Re-cah" collectionClass="NSMutableArray" id="f8A-O3-cVK"/>
                         <outletCollection property="dayLabels" destination="DZ5-fS-8MW" collectionClass="NSMutableArray" id="q8C-zL-bwl"/>
                         <outletCollection property="dayLabels" destination="VWY-HP-h5H" collectionClass="NSMutableArray" id="els-wy-NRg"/>
+                        <outletCollection property="timeLabels" destination="UUj-LX-YmM" collectionClass="NSMutableArray" id="f3p-uy-vsn"/>
+                        <outletCollection property="timeLabels" destination="xxq-kr-m82" collectionClass="NSMutableArray" id="AHZ-YH-SKr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="585-Us-OPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -589,38 +591,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="R03-uJ-Dwy">
-                                                    <rect key="frame" x="253" y="17.000000000000004" width="120" height="63.333333333333343"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 120 -140" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="21.666666666666668"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌙  50 - 140" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-lW-o8Y">
-                                                            <rect key="frame" x="0.0" y="41.666666666666664" width="120" height="21.666666666666664"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="120" id="Nc3-F0-PUs"/>
-                                                    </constraints>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☀️ 120 -140" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4h-6Z-dJN">
+                                                    <rect key="frame" x="252.66666666666666" y="37.666666666666664" width="100.33333333333334" height="21.666666666666664"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="n5j-d7-5vi" firstAttribute="leading" secondItem="hJ7-0g-O9C" secondAttribute="leading" constant="20" id="HDo-GF-Nwx"/>
-                                                <constraint firstItem="R03-uJ-Dwy" firstAttribute="centerY" secondItem="hJ7-0g-O9C" secondAttribute="centerY" id="fui-gU-Ffz"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="W4h-6Z-dJN" secondAttribute="trailing" constant="20" id="KjE-ev-afn"/>
+                                                <constraint firstItem="W4h-6Z-dJN" firstAttribute="centerY" secondItem="hJ7-0g-O9C" secondAttribute="centerY" id="PQR-vH-J3k"/>
                                                 <constraint firstItem="n5j-d7-5vi" firstAttribute="centerY" secondItem="hJ7-0g-O9C" secondAttribute="centerY" id="sR2-0t-VcX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="R03-uJ-Dwy" secondAttribute="trailing" id="xfq-5R-tkY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dayLabel" destination="n5j-d7-5vi" id="vJU-J3-qKD"/>
-                                            <outlet property="dayTimePrice" destination="W4h-6Z-dJN" id="12f-st-GW4"/>
-                                            <outlet property="nightTimePrice" destination="jzJ-lW-o8Y" id="tCu-wZ-NHz"/>
+                                            <outlet property="priceLabel" destination="W4h-6Z-dJN" id="12f-st-GW4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

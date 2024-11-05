@@ -10,9 +10,10 @@ import UIKit
 final class CalculateViewController: UIViewController {
     
     @IBOutlet weak var purchaseLabel: UILabel!
+    @IBOutlet var timeLabels: [UILabel]!
     @IBOutlet var dayLabels: [UILabel]!
     
-    @IBOutlet weak var purchasePrice: UITextField!
+    @IBOutlet weak var purchasePriceTextField: UITextField!
     @IBOutlet var dailyTurnipPrices: [UITextField]!
     
     @IBOutlet weak var initializeButton: UIButton!
@@ -29,11 +30,9 @@ final class CalculateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureLocalization()
-        checkTextFieldContent()
         loadDataToTextFields()
+        configureLocalization()
         addKeyboardDismissGesture()
-        purchasePrice.addTarget(self, action: #selector(textFieldEditingChanged), for: .editingChanged)
     }
     
     // MARK: - Localization
@@ -42,31 +41,20 @@ final class CalculateViewController: UIViewController {
         self.navigationItem.title = "navi_title".localized
         
         purchaseLabel.text = "purchase_price".localized
-        purchasePrice.placeholder = "purchase_price".localized
+        purchasePriceTextField.placeholder = "purchase_price".localized
+        
+        let times = ["morning", "afternoon"].map { $0.localized }
+        times.enumerated().forEach { index, time in
+            timeLabels[index].text = time
+        }
         
         let weekDays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].map { $0.localized }
-        weekDays.enumerated().forEach { index, dayKey in
-            dayLabels[index].text = dayKey
+        weekDays.enumerated().forEach { index, day in
+            dayLabels[index].text = day
         }
         
         initializeButton.setTitle("initialize_button".localized, for: .normal)
         nextButton.setTitle("next_button".localized, for: .normal)
-    }
-    
-    // MARK: - TextField Validation
-    
-    @objc private func textFieldEditingChanged(_ textField: UITextField) {
-        checkTextFieldContent()
-    }
-    
-    private func checkTextFieldContent() {
-        if let purchasePrice = purchasePrice.text, !purchasePrice.isEmpty {
-            nextButton.isEnabled = true
-            nextButton.backgroundColor = UIColor(named: "BackgroundColor")
-        } else {
-            nextButton.isEnabled = false
-            nextButton.backgroundColor = .systemGray3
-        }
     }
     
     // MARK: - Data Loading
@@ -75,7 +63,7 @@ final class CalculateViewController: UIViewController {
         guard let purchasePrice = UserDefaults.standard.string(forKey: UserDefaultsKeys.purchasePrice) else { return }
         guard let savedTurnipPrices = UserDefaults.standard.stringArray(forKey: UserDefaultsKeys.turnipPrices) else { return }
         
-        self.purchasePrice.text = purchasePrice
+        self.purchasePriceTextField.text = purchasePrice
         for (textField, price) in zip(dailyTurnipPrices, savedTurnipPrices) {
             textField.text = price
         }
@@ -85,7 +73,7 @@ final class CalculateViewController: UIViewController {
     
     @IBAction private func resetButtonTapped(_ sender: UIButton) {
         print(#function)
-        purchasePrice.text = ""
+        purchasePriceTextField.text = ""
         
         for textField in dailyTurnipPrices {
             textField.text = ""
@@ -101,7 +89,7 @@ final class CalculateViewController: UIViewController {
     // MARK: - Networking
     
     private func fetchTurnipPrices() {
-        guard let purchasePrice = purchasePrice.text else { return }
+        guard let purchasePrice = purchasePriceTextField.text else { return }
         
         networkManager.fetchTurnipPriceData(purchasePrice: purchasePrice, dailyPrices: turnipPrices) { data in
             switch data {
@@ -116,7 +104,7 @@ final class CalculateViewController: UIViewController {
     // MARK: - User Defaults
     
     private func saveTurnipPricesToUserDefaults() {
-        UserDefaults.standard.set(purchasePrice.text, forKey: UserDefaultsKeys.purchasePrice)
+        UserDefaults.standard.set(purchasePriceTextField.text, forKey: UserDefaultsKeys.purchasePrice)
         UserDefaults.standard.set(turnipPrices, forKey: UserDefaultsKeys.turnipPrices)
         print("Data가 UserDefaults에 저장되었습니다.")
     }

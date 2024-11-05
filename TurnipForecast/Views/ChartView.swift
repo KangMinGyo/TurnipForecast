@@ -15,29 +15,15 @@ struct ChartView: View {
         Chart {
             ForEach(dailyPriceData) { data in
                 BarMark(
-                    xStart: .value("Price", data.dayMin),
-                    xEnd: .value("Price", data.dayMax + 1),
-                    y: .value("Day", "\(data.day) ☀️")
+                    xStart: .value("Price", data.minPrice),
+                    xEnd: .value("Price", data.maxPrice + 1),
+                    y: .value("Day", "\(data.day)")
                 )
-                .foregroundStyle(Color.Chart.dayColor)
+                .foregroundStyle(data.day.contains("☀️") ? Color.Chart.dayColor : Color.Chart.nightColor)
                 .annotation(position: .trailing) {
-                    Text(data.dayMin == data.dayMax
-                        ? "\(Int(data.dayMin))"
-                        : "\(Int(data.dayMin)) - \(Int(data.dayMax))")
-                        .font(.caption)
-                        .foregroundColor(.black)
-                }
-                
-                BarMark(
-                    xStart: .value("Price", data.nightMin),
-                    xEnd: .value("Price", data.nightMax + 1),
-                    y: .value("Day", "\(data.day) 🌙")
-                )
-                .foregroundStyle(Color.Chart.nightColor)
-                .annotation(position: .trailing) {
-                    Text(data.nightMin == data.nightMax
-                        ? "\(Int(data.nightMin))"
-                        : "\(Int(data.dayMin)) - \(Int(data.nightMax))")
+                    Text(data.minPrice == data.maxPrice
+                        ? "\(Int(data.minPrice))"
+                        : "\(Int(data.minPrice)) - \(Int(data.maxPrice))")
                         .font(.caption)
                         .foregroundColor(.black)
                 }

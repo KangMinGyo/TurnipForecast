@@ -34,7 +34,7 @@ final class TablesViewController: UIViewController {
     
     private func setupTableView() {
         pricesTableView.dataSource = self
-        pricesTableView.rowHeight = 100
+        pricesTableView.rowHeight = 70
     }
     
     private func setupLoadingIndicator() {
@@ -78,13 +78,14 @@ final class TablesViewController: UIViewController {
 extension TablesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 12
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = pricesTableView.dequeueReusableCell(withIdentifier: Cell.pricesCellIdentifier, for: indexPath) as! PricesCell
         guard let data = turnipPrices else { return UITableViewCell() }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
+        print("변환 데이터 --> \(dailyPriceData)")
         cell.dailyPriceData = dailyPriceData[indexPath.row]
         cell.isUserInteractionEnabled = false
         

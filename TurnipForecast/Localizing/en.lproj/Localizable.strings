@@ -6,7 +6,10 @@
   
 */
 
-/* Weekdays Localization */
+/* Times & Weekdays Localization */
+
+"morning" = "AM";
+"afternoon" = "PM";
 
 "monday" = "MON";
 "tuesday" = "TUE";
@@ -14,6 +17,20 @@
 "thursday" = "THU";
 "friday" = "FRI";
 "saturday" = "SAT";
+
+"monday_morning" = "Monday ☀️";
+"monday_afternoon" = "Monday 🌙";
+"tuesday_morning" = "Tuesday ☀️";
+"tuesday_afternoon" = "Tuesday 🌙";
+"wednesday_morning" = "Wednesday ☀️";
+"wednesday_afternoon" = "Wednesday 🌙";
+"thursday_morning" = "Thursday ☀️";
+"thursday_afternoon" = "Thursday 🌙";
+"friday_morning" = "Friday ☀️";
+"friday_afternoon" = "Friday 🌙";
+"saturday_morning" = "Saturday ☀️";
+"saturday_afternoon" = "Saturday 🌙";
+
 
 /* CalculateViewController Localization */
 

@@ -41,7 +41,7 @@ final class ChartViewController: UIViewController {
     func prepareChartData() {
         guard let data = turnipPrices else { return }
         let dailyPriceData = DailyPriceData.convertFromTurnipPriceData(turnipPriceData: data)
-        setupChartView(with: dailyPriceData)
+        setupChartView(with: dailyPriceData) 
     }
     
     private func setupChartView(with dailyPriceData: [DailyPriceData]) {

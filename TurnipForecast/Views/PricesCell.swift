@@ -10,27 +10,22 @@ import UIKit
 final class PricesCell: UITableViewCell {
 
     @IBOutlet weak var dayLabel: UILabel!
-    @IBOutlet weak var dayTimePrice: UILabel!
-    @IBOutlet weak var nightTimePrice: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     var dailyPriceData: DailyPriceData? {
         didSet {
             guard let data = dailyPriceData else { return }
             dayLabel.text = data.day
-            dayTimePrice.text = data.dayMin == data.dayMax
-            ? "☀️ \(Int(data.dayMin))"
-            : "☀️ \(Int(data.dayMin)) - \(Int(data.dayMax))"
-            nightTimePrice.text = data.nightMin == data.nightMax
-            ? "🌙 \(Int(data.nightMin))"
-            :"🌙 \(Int(data.nightMin)) - \(Int(data.nightMax))"
+            priceLabel.text = data.minPrice == data.maxPrice
+            ? "\(Int(data.minPrice))"
+            : "\(Int(data.minPrice)) - \(Int(data.maxPrice))"
         }
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         dayLabel.text = nil
-        dayTimePrice.text = nil
-        nightTimePrice.text = nil
+        priceLabel.text = nil
     }
     
     override func awakeFromNib() {

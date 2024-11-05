@@ -8,12 +8,28 @@
 
 /* Weekdays Localization */
 
+"morning" = "午前";
+"afternoon" = "午後";
+
 "monday" = "月曜日";
 "tuesday" = "火曜日";
 "wednesday" = "水曜日";
 "thursday" = "木曜日";
 "friday" = "金曜日";
 "saturday" = "土曜日";
+
+"monday_morning" = "月曜日 ☀️";
+"monday_afternoon" = "月曜日 🌙";
+"tuesday_morning" = "火曜日 ☀️";
+"tuesday_afternoon" = "火曜日 🌙";
+"wednesday_morning" = "水曜日 ☀️";
+"wednesday_afternoon" = "水曜日 🌙";
+"thursday_morning" = "木曜日 ☀️";
+"thursday_afternoon" = "木曜日 🌙";
+"friday_morning" = "金曜日 ☀️";
+"friday_afternoon" = "金曜日 🌙";
+"saturday_morning" = "土曜日 ☀️";
+"saturday_afternoon" = "土曜日 🌙";
 
 
 /* CalculateViewController Localization */

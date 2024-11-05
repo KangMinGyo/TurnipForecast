@@ -6,9 +6,10 @@
   
 */
 
-// "" = "";
-
 /* Weekdays Localization */
+
+"morning" = "오전";
+"afternoon" = "오후";
 
 "monday" = "월요일";
 "tuesday" = "화요일";
@@ -16,6 +17,19 @@
 "thursday" = "목요일";
 "friday" = "금요일";
 "saturday" = "토요일";
+
+"monday_morning" = "월요일 ☀️";
+"monday_afternoon" = "월요일 🌙";
+"tuesday_morning" = "화요일 ☀️";
+"tuesday_afternoon" = "화요일 🌙";
+"wednesday_morning" = "수요일 ☀️";
+"wednesday_afternoon" = "수요일 🌙";
+"thursday_morning" = "목요일 ☀️";
+"thursday_afternoon" = "목요일 🌙";
+"friday_morning" = "금요일 ☀️";
+"friday_afternoon" = "금요일 🌙";
+"saturday_morning" = "토요일 ☀️";
+"saturday_afternoon" = "토요일 🌙";
 
 
 /* CalculateViewController Localization */
