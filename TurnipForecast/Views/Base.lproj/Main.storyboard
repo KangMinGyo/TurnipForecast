@@ -488,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEe-Xf-VKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4814.5038167938928" y="-401.40845070422534"/>
+            <point key="canvasLocation" x="4784" y="-1129"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="Xar-U5-UXf">
@@ -546,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="diI-oj-9We" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4815" y="296"/>
+            <point key="canvasLocation" x="4940" y="-69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PWf-bR-X9K">
@@ -628,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWT-2b-Dqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5722.900763358778" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="5847" y="-361"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="rL8-yQ-wJ7">
@@ -643,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6u-KP-grL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5723" y="604"/>
+            <point key="canvasLocation" x="5848" y="239"/>
         </scene>
     </scenes>
     <resources>
@@ -658,7 +658,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -36,6 +36,10 @@ final class ChartViewController: UIViewController {
         }
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     //  MARK: - Setup Chart View
     
     func prepareChartData() {
