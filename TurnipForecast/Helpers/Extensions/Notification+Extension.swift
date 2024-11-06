@@ -8,5 +8,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let didCalculateResult = Notification.Name("DidCalculateResult")
+    static let didCalculateResult = Notification.Name("didCalculateResult")
 }
