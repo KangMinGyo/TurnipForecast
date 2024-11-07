@@ -52,8 +52,8 @@ final class ChartViewController: UIViewController {
         let controller = UIHostingController(rootView: ChartView(dailyPriceData: dailyPriceData))
         
         guard let chartView = controller.view else { return }
-        chartView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(chartView)
+        chartView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             chartView.topAnchor.constraint(equalTo: view.topAnchor),
