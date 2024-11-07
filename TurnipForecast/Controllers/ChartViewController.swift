@@ -49,17 +49,17 @@ final class ChartViewController: UIViewController {
     }
     
     private func setupChartView(with dailyPriceData: [DailyPriceData]) {
-        let controller = UIHostingController(rootView: ChartView(dailyPriceData: dailyPriceData))
+        // UIHostingController를 사용하여 SwiftUI View(ChartView)를 포함
+        let hostingController = UIHostingController(rootView: ChartView(dailyPriceData: dailyPriceData))
         
-        guard let chartView = controller.view else { return }
-        view.addSubview(chartView)
-        chartView.translatesAutoresizingMaskIntoConstraints = false
+        // UIHostingController를 현재 VC의 자식 VC로 추가
+        addChild(hostingController)
         
-        NSLayoutConstraint.activate([
-            chartView.topAnchor.constraint(equalTo: view.topAnchor),
-            chartView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            chartView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            chartView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        view.addSubview(hostingController.view)
+        
+        hostingController.view.frame = view.frame
+
+        // UIHostingController가 부모 뷰 컨트롤러에 추가됨을 알림
+        hostingController.didMove(toParent: self)
     }
 }
