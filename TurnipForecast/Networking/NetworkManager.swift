@@ -19,7 +19,7 @@ final class NetworkManager {
     typealias NetworkCompletion = (Result<TurnipPriceData, NetworkError>) -> Void
 
     func fetchTurnipPriceData(purchasePrice: String, dailyPrices: [String], completion: @escaping NetworkCompletion) {
-        let formattedPrices = dailyPrices.filter { $0 != "" }.map { $0 }.joined(separator: "-")
+        let formattedPrices = dailyPrices.map { $0.isEmpty ? "0" : $0 }.joined(separator: "-")
         let urlString = "\(TurnipApi.requestUrl)\(TurnipApi.mediaParam)\(purchasePrice)-\(formattedPrices)"
         print(urlString)
         
